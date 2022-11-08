@@ -1,0 +1,3 @@
+G:/Stikom/Algoritma/Pratikum-Algoritma/cmake-build-debug/CMakeFiles/Pratikum_Algoritma.dir
+G:/Stikom/Algoritma/Pratikum-Algoritma/cmake-build-debug/CMakeFiles/edit_cache.dir
+G:/Stikom/Algoritma/Pratikum-Algoritma/cmake-build-debug/CMakeFiles/rebuild_cache.dir
