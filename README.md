@@ -1,6 +1,6 @@
 # Pratikum-Algoritma
-<p>Kumpulan Source Code Selama Pratikum Algoritma BC224.</p>
+Kumpulan Source Code Selama Pratikum Algoritma BC224.
 
-<p>**BUILD WITH CLION 2022 by JetBrains,**</p>
-<p>Source : **W3School**</p>
-<https://www.w3schools.com/cpp/default.asp>
+**BUILD WITH CLION 2022 by JetBrains.**<br>
+Source : **W3School**<br>
+https://www.w3schools.com/cpp/default.asp
