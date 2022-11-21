@@ -1,7 +1,7 @@
 #include <iostream>
 
 using namespace std;
-
+// Array 1 Dimensi
 int main()
 {
     int deret[5];
