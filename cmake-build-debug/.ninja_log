@@ -1,8 +1,15 @@
 # ninja log v5
-3	313	6895797029207167	CMakeFiles/Pratikum_Algoritma.dir/main.cpp.obj	9e0743fbb4366a32
+0	310	6912621750900889	CMakeFiles/Pratikum_Algoritma.dir/main.cpp.obj	9e0743fbb4366a32
 4	285	6901801813561746	CMakeFiles/Pratikum_Algoritma.dir/uts3.cpp.obj	124673712e6474b8
-294	364	6912600726914444	Pratikum_Algoritma.exe	2d4e8684f45ec4f8
-3	294	6912600726234213	CMakeFiles/Pratikum_Algoritma.dir/link.cpp.obj	324ded2882774f74
+310	410	6912621751860926	Pratikum_Algoritma.exe	ac9a0e86429eb921
+3	322	6912620086392225	CMakeFiles/Pratikum_Algoritma.dir/link.cpp.obj	324ded2882774f74
 2	278	6897897004656106	CMakeFiles/Pratikum_Algoritma.dir/segitiga.cpp.obj	e1e6df00341c645f
-2	144	6912610319167425	build.ninja	23ba60772fcd13c6
+0	145	6912622345517711	build.ninja	23ba60772fcd13c6
 3	275	6897902395243602	CMakeFiles/Pratikum_Algoritma.dir/segitiga2.cpp.obj	280fbdaf28718eec
+0	109	6912622345517711	build.ninja	23ba60772fcd13c6
+2	334	6912622349037699	CMakeFiles/Pratikum_Algoritma.dir/link.cpp.obj	324ded2882774f74
+335	422	6912622349887958	Pratikum_Algoritma.exe	2d4e8684f45ec4f8
+4	348	6912630051009299	CMakeFiles/Pratikum_Algoritma.dir/link.cpp.obj	324ded2882774f74
+348	447	6912630051959287	Pratikum_Algoritma.exe	2d4e8684f45ec4f8
+3	325	6912630939754037	CMakeFiles/Pratikum_Algoritma.dir/link.cpp.obj	324ded2882774f74
+325	414	6912630940614040	Pratikum_Algoritma.exe	2d4e8684f45ec4f8

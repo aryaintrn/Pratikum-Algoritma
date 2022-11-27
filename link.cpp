@@ -20,7 +20,7 @@ int isEmpty(){
     else return 0;
 }
 
-void MasukanDepan(int dta)
+void inputDpn(int dta)
 {
     TNode *tambah;
     tambah = new TNode;
@@ -38,7 +38,7 @@ void MasukanDepan(int dta)
     cout<<"Berhasil\n ";
 }
 
-void Selip(){
+void newInput(){
     TNode *tambah;
     tambah = new TNode;
     tambah->next = head->next;
@@ -55,7 +55,7 @@ void Selip(){
     cout<<"Berhasil\n ";
 }
 
-void Muncul(){
+void show(){
     TNode *help;
     help=head;
     if(isEmpty()==0)
@@ -68,7 +68,27 @@ void Muncul(){
     }else cout <<"Data Kosong\n ";
 }
 
-void hapusDepan(){
+void caridata(int data) {
+    TNode *help;
+    help = head;
+    int ketemu = false;
+    if(isEmpty()==0){
+        while(help!=NULL && !ketemu){
+            if (help->data == data) {
+                ketemu == true;
+            } else {
+                help=help->next;
+            }
+        }
+        if (ketemu) {
+            cout<<"Data ditemukan"<<endl;
+        } else {
+            cout<<"Data tidak ditemukan"<<endl;
+        }
+    } else cout<<("Masih kosong\n");
+}
+
+void clearDpn(){
     TNode *hapus;
     int d;
     if (isEmpty()==0)
@@ -88,25 +108,8 @@ void hapusDepan(){
     }else cout<<"Data Kosong\n";
 }
 
-void clearBelakang(){
-    TNode*hapus,*help;
-    int d;
-    if (isEmpty()==0){
-        if (head->next != NULL){
-            help=head;
-            while(help->next->next !=NULL){
-                help=help->next;
-            }
-            hapus=help->next;
-            d=hapus->data;
-            help->next=NULL;
-            delete hapus;
-        }else{
-            d=head->data;
-            head=tail=NULL;
-        }
-        cout<<d<<"Terhapus\n ";
-    }else cout<<"Data Kosong\n ";
+void batal(){
+    cout<<"Hapus File Dibatalkan"<<endl;
 }
 
 void clear()
@@ -120,27 +123,28 @@ void clear()
         delete hapus;
     }
     head = NULL;
-    printf(" clear ");
+    printf("Berhasil");
 }
 
-void hapus(){
+void dlt(){
     cout<<endl;
-    cout<<"1.Hapus Depan"<<endl;
-    cout<<"2.Hapus Belakang"<<endl;
+    cout<<"1.Confirm"<<endl;
+    cout<<"2.Batal"<<endl;
     cout<<"Pilih:";cin>>intrn;
     switch (intrn)
     {
         case 1:
-            hapusDepan();
+            clearDpn();
             break;
         case 2:
-            clearBelakang();
+            batal();
             break;
     }
 }
 
 int main(){
     int dta;
+    int cari;
     do{
         cout<<endl;
         cout<<"Pilih Menu:"<<endl;
@@ -149,26 +153,31 @@ int main(){
         cout<<"3.Munculkan Data"<<endl;
         cout<<"4.Hapus Semua Data"<<endl;
         cout<<"5.Sisipkan Data"<<endl;
-        cout<<"6.Keluar"<<endl;
+        cout<<"6.Sisipkan Data"<<endl;
+        cout<<"7.Keluar"<<endl;
         cout<<"Pilih:";cin>>intrn;
         switch (intrn){
             case 1:
                 cout<<"Input Data =";cin>>dta;
-                MasukanDepan(dta);
+                inputDpn(dta);
                 break;
             case 2:
-                hapus();
+                dlt();
                 break;
             case 3:
-                Muncul();
+                show();
                 break;
             case 4:
                 clear();
                 break;
             case 5:
-                Selip();
+                newInput();
                 break;
             case 6:
+                cout<<"Cari Data =";cin>>cari;
+                caridata(cari);
+                break;
+            case 7:
                 return 0;
                 break;
             default :
