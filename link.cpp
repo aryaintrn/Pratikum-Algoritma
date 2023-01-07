@@ -35,7 +35,7 @@ void inputDpn(int dta)
         tambah->next = head;
         head=tambah;
     }
-    cout<<"Berhasil\n ";
+    cout<<"Berhasil"<<endl;
 }
 
 void SisipSesudah(int databaru, int datacari){
@@ -59,7 +59,7 @@ void SisipSesudah(int databaru, int datacari){
         } else {
             cout<<"Data tidak ditemukan"<<endl;
         }
-    } else cout<<("Masih kosong\n");
+    } else { cout<<"Data kosong"<<endl; }
 }
 
 void SisipSebelum(int databaru, int datacari){
@@ -77,12 +77,12 @@ void SisipSebelum(int databaru, int datacari){
             while (temp != NULL && temp->data != datacari) {
                 prev = temp;
                 temp = temp->next;
-                cout<<("Data");
+                cout<<"Berhasil"<<endl;
             }
             prev->next = tambah;
             tambah->next = temp;
         }
-    } else cout<<("Data Tidak Ada");
+    } else { cout<<"Data Tidak Ada"<<endl; }
 }
 
 void show(){
@@ -95,7 +95,7 @@ void show(){
             cout<<help->data<<" ";
             help=help->next;
         }
-    }else cout <<"Data Kosong\n ";
+    }else { cout<<"Data Kosong"<<endl; }
 }
 
 void caridata(int data) {
@@ -115,7 +115,7 @@ void caridata(int data) {
         } else {
             cout<<"Data tidak ditemukan"<<endl;
         }
-    } else cout<<("Masih kosong\n");
+    } else { cout<<"Data Kosong"<<endl; }
 }
 
 void deldata(int data) {
@@ -123,8 +123,8 @@ void deldata(int data) {
     TNode *temp = head;
     if(isEmpty()==0){
         if (temp != NULL && temp->data == data) {
-            head = temp->next; // Changed head
-            delete temp;            // free old head
+            head = temp->next;
+            delete temp;
             return;
         } else {
             while (temp != NULL && temp->data != data) {
@@ -135,7 +135,7 @@ void deldata(int data) {
             delete temp;
         }
 
-    } else cout<<("Masih kosong\n");
+    } else { cout << "Masih kosong" << endl; }
 }
 
 void clearDpn(){
@@ -155,7 +155,7 @@ void clearDpn(){
             head=tail=NULL;
         }
         cout<<d<< "Terhapus ";
-    }else cout<<"Data Kosong\n";
+    }else { cout << "Data Kosong" << endl; }
 }
 
 void clearBlkng(){
@@ -175,8 +175,8 @@ void clearBlkng(){
             d=head->data;
             head=tail=NULL;
         }
-        cout<<" Data : " <<d<<" Terhapus\n ";
-    }else cout<<" Masih kosong\n ";
+        cout<<" Data : " <<d<<" Terhapus"<<endl;
+    }else cout<<"Data Kosong"<<endl;
 }
 
 void clear()
@@ -190,14 +190,15 @@ void clear()
         delete hapus;
     }
     head = NULL;
-    printf("Berhasil");
+    cout<<"Berhasil"<<endl;
 }
 
 void dlt(){
     cout<<endl;
     cout<<"1.Hapus Data Depan"<<endl;
     cout<<"2.Hapus Data Belakang"<<endl;
-    cout<<"Pilih:";cin>>intrn;
+    cout<<"Pilih:";
+    cin>>intrn;
     switch (intrn)
     {
         case 1:
@@ -215,11 +216,13 @@ void Menudlt(){
     cout<<"1.Hapus Data Tertentu"<<endl;
     cout<<"2.Hapus Data Sesuai Posisi"<<endl;
     cout<<"3.Hapus Seluruh Data"<<endl;
-    cout<<"Pilih:";cin>>intrn;
+    cout<<"Pilih:";
+    cin>>intrn;
     switch (intrn)
     {
         case 1:
-            cout<<"Input Data Yang Akan Di Hapus =";cin>>hps;
+            cout<<"Input Data Yang Akan Di Hapus =";
+            cin>>hps;
             deldata(hps);
             break;
         case 2:
@@ -239,12 +242,15 @@ void Sisip(){
     cout<<endl;
     cout<<"1.Menyisipkan setelah data"<<endl;
     cout<<"2.Menyisipkan sebelum data"<<endl;
-    cout<<"Pilih:";cin>>intrn;
+    cout<<"Pilih:";
+    cin>>intrn;
     switch (intrn)
     {
         case 1:
-            cout<<"Data Baru =";cin>>databaru;
-            cout<<"Lokasi =";cin>>lokasi;
+            cout<<"Data Baru =";
+            cin>>databaru;
+            cout<<"Lokasi =";
+            cin>>lokasi;
             SisipSesudah(databaru, lokasi);
             break;
         case 2:
@@ -270,7 +276,8 @@ int main(){
         cout<<"Pilih:";cin>>intrn;
         switch (intrn){
             case 1:
-                cout<<"Input Data =";cin>>dta;
+                cout<<"Input Data =";
+                cin>>dta;
                 inputDpn(dta);
                 break;
             case 2:
@@ -283,12 +290,13 @@ int main(){
                 Sisip();
                 break;
             case 5:
-                cout<<"Cari Data =";cin>>cari;
+                cout<<"Cari Data =";
+                cin>>cari;
                 caridata(cari);
                 break;
             case 6:
+                cout<<"Berhasil Keluar Dari Menu"<<endl;
                 return 0;
-                break;
             default :
                 cout<<"Tidak Tersedia";
         }
